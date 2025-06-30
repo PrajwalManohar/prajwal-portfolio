@@ -39,9 +39,9 @@ const projects = [
     image: plate,
     link: '#',
     description:
-      'Cleaned and transformed large-scale COVID-19 datasets in Excel and developed an interactive Power BI dashboard to visualize infection trends across demographics and support public health decisions.',
-    techStack: ['Microsoft Excel', 'Power BI'],
-    category: 'Data Analytics'
+      'Developed a License Plate Detection system using TensorFlow Object Detection (TFOD) to accurately identify vehicle license plates, addressing the growing need for efficient traffic monitoring in densely populated areas like India. The project integrates video processing and Optical Character Recognition (OCR) to extract license plate numbers, making it ideal for use at college gates and high-security zones. Captured video footage is processed into images and text, which are then stored in a database for future reference and security analysis.',
+    techStack: ["TensorFlow Object Detection (TFOD)", "OpenCV","Tesseract OCR"],
+    category: 'Full Stack'
   },
   // {
   //   title: 'Flipbook Library',
