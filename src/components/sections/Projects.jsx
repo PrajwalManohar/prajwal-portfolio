@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { RevealOnScroll } from '../RevealOnScroll';
 
-import hermespass from '../../assets/hermespass.png';
-import dashboard from '../../assets/dashboard.png';
+// import hermespass from '../../assets/hermespass.png';
+// import dashboard from '../../assets/dashboard.png';
 
 import project from '../../assets/project.png';
+import chest from '../../assets/chest.jpg';
+import object from '../../assets/obj.jpg';
+import plate from '../../assets/plate.jpg';
+
+
+
 
 const projects = [
   {
     "title": "Speech Activated Object Detection with Visual Recognition",
-    "image": project,
+    "image": object,
     "description": "AI-powered assistive tool for the visually impaired using MobileNet SSD and CNNs. Features real-time object detection with voice commands and audio feedback to help users navigate their environment safely and independently.",
     "techStack": ["React", "Express", "Node", "TensorFlow", "MobileNet SSD", "Web Speech API"],
     "link": "",
@@ -19,7 +25,7 @@ const projects = [
   },
   {
     title: 'Chest X-Ray Medical Diagnosis with Deep Learning',
-    image: hermespass,
+    image: chest,
     link: '',
     description:
       'Developed a multi-label chest X-ray classifier using DenseNet on the ChestX-ray8 dataset to enhance thorax disease diagnosis.',
@@ -30,7 +36,7 @@ const projects = [
 
   {
     title: 'Automatic Number Plate Detection using TFOD',
-    image: dashboard,
+    image: plate,
     link: '#',
     description:
       'Cleaned and transformed large-scale COVID-19 datasets in Excel and developed an interactive Power BI dashboard to visualize infection trends across demographics and support public health decisions.',
