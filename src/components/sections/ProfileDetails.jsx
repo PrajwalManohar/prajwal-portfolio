@@ -109,8 +109,12 @@ export const ProfileDetails = () => {
                         metric: "32% faster deployment, 40% less troubleshooting"
                       },
                       {
-                        text: "Pioneered GenAI integration with SAP S/4 HANA, implementing LLM-powered Text-to-SQL capabilities that accelerated risk analysis. Automated technical documentation generation.",
-                        metric: "59% faster analysis, 300+ hours saved annually"
+                        text: "Spearheaded integration of Generative AI services with SAP S/4HANA to enhance decision-making in supply chain and finance operations. Enabled AI-based summarization of vendor risk profiles, significantly improving insight turnaround time by 35%.",
+                        metric: "35% faster analysis, Accelerated executive-level decision-making with real-time risk insights driven by LLMs."
+                      },
+                      {
+                        text: "Designed and deployed a GenAI-enabled application that automates functional documentation generation across enterprise workflows. Integrated with SAP BTP & SAP AI Core, this solution saved over 300+ engineering hours annually by transforming technical specifications into human-readable documentation with LLM-driven summarization and structured formatting.",
+                        metric: "300+ Manual hours saved annually"
                       },
                       {
                         text: "Delivered 2 major releases with optimized data models improving query response times.",
