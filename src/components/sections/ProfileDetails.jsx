@@ -1,6 +1,5 @@
 import React from "react";
-import { Building2, FlaskConical, BarChart3, GraduationCap, BookOpen, Calendar, MapPin, Star } from 'lucide-react';
-
+import { Building2, FlaskConical, BarChart3, GraduationCap, BookOpen, Calendar, MapPin, Star, Code, Database, Cloud, Cpu, Zap, Settings, GitBranch, Shield, Network } from 'lucide-react';
 // Mock RevealOnScroll component for demo
 const RevealOnScroll = ({ children }) => {
   return <div className="animate-fade-in">{children}</div>;
@@ -31,112 +30,164 @@ export const ProfileDetails = () => {
           </div>
 
           <div className="space-y-8 mb-20">
-            {/* Current Position */}
-            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:border-blue-200 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <div className="flex items-start gap-6 relative z-10">
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <FlaskConical className="w-7 h-7 text-white" />
-                  </div>
-                </div>
-                
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      Current
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
-                    Graduate Research Assistant
-                  </h3>
-                  
-                  <div className="flex items-center gap-4 text-gray-600 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span className="text-sm">April 2025 - Present</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      <span className="text-sm">Indiana University</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-700 leading-relaxed text-lg">
-                    Developing a cloud-based analytics pipeline to track Food Nutrition Engagement for Snacks and Satiety study. 
-                    <span className="inline-flex items-center gap-1 bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-sm ml-2">
-                      <Star className="w-3 h-3" />
-                      25% improvement in participation
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Accenture Position */}
-            <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:border-blue-200 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <div className="flex items-start gap-6 relative z-10">
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <BarChart3 className="w-7 h-7 text-white" />
-                  </div>
-                </div>
-                
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors">
-                    Full Stack Engineering Analyst
-                  </h3>
-                  
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Accenture, India
-                    </span>
-                  </div>
-                  
-                  <div className="grid gap-4">
-                    {[
-                      {
-                        text: "Led enterprise-scale software engineering initiatives serving 10,000+ users with $15M revenue impact. Architected robust microservices using Java Spring Boot and optimized AWS cloud infrastructure.",
-                        metric: "35% reliability improvement"
-                      },
-                      {
-                        text: "Spearheaded DevOps automation reducing deployment time across 8+ environments and troubleshooting time through custom Kibana dashboards.",
-                        metric: "32% faster deployment, 40% less troubleshooting"
-                      },
-                      {
-                        text: "Spearheaded integration of Generative AI services with SAP S/4HANA to enhance decision-making in supply chain and finance operations. Enabled AI-based summarization of vendor risk profiles, significantly improving insight turnaround time by 35%.",
-                        metric: "35% faster analysis, Accelerated executive-level decision-making with real-time risk insights driven by LLMs."
-                      },
-                      {
-                        text: "Designed and deployed a GenAI-enabled application that automates functional documentation generation across enterprise workflows. Integrated with SAP BTP & SAP AI Core, this solution saved over 300+ engineering hours annually by transforming technical specifications into human-readable documentation with LLM-driven summarization and structured formatting.",
-                        metric: "300+ Manual hours saved annually"
-                      },
-                      {
-                        text: "Delivered 2 major releases with optimized data models improving query response times.",
-                        metric: "45% faster queries"
-                      }
-                    ].map((achievement, index) => (
-                      <div key={index} className="flex items-start gap-3 p-4 bg-white/50 rounded-xl border border-gray-100 hover:border-purple-200 transition-colors">
-                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mt-3 flex-shrink-0"></div>
-                        <div className="flex-1">
-                          <p className="text-gray-700 leading-relaxed mb-2">{achievement.text}</p>
-                          <span className="inline-flex items-center gap-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
-                            <Star className="w-3 h-3" />
-                            {achievement.metric}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+      {/* Current Position */}
+      <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:border-blue-200 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        <div className="flex items-start gap-6 relative z-10">
+          <div className="flex-shrink-0">
+            <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <FlaskConical className="w-7 h-7 text-white" />
             </div>
           </div>
+          
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                Current
+              </span>
+            </div>
+            
+            <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+              Graduate Research Assistant
+            </h3>
+            
+            <div className="flex items-center gap-4 text-gray-600 mb-4">
+              <div className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
+                <span className="text-sm">April 2025 - Present</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <MapPin className="w-4 h-4" />
+                <span className="text-sm">Indiana University School of Public Health</span>
+              </div>
+            </div>
+            
+            <div className="grid gap-4">
+              {[
+                {
+                  text: "Currently developing cloud-based data analytics pipeline using Python and Azure services for Food Nutrition Engagement study. Initial prototype shows promising results in tracking student participation patterns across diverse demographic groups.",
+                  metric: "Early 25% improvement in participation tracking",
+                  icon: <Cloud className="w-4 h-4" />
+                },
+                {
+                  text: "Designing and implementing real-time streaming analytics architecture using Apache Kafka and Apache Flink to monitor student engagement patterns. Working on predictive models using TensorFlow and scikit-learn for behavioral analysis.",
+                  metric: "In development - targeting 25% prediction accuracy improvement",
+                  icon: <Zap className="w-4 h-4" />
+                },
+                {
+                  text: "Researching and prototyping machine learning algorithms for behavioral pattern analysis across diverse demographic groups. Exploring integration with OpenAI GPT-4 for advanced demographic segmentation insights.",
+                  metric: "Research phase - ML model optimization ongoing",
+                  icon: <Cpu className="w-4 h-4" />
+                },
+                {
+                  text: "Building interactive data visualization dashboards and establishing REST API integrations for stakeholder reporting. Focus on creating comprehensive analytics for public health decision-making.",
+                  metric: "Dashboard development in progress",
+                  icon: <BarChart3 className="w-4 h-4" />
+                }
+              ].map((achievement, index) => (
+                <div key={index} className="flex items-start gap-3 p-4 bg-white/50 rounded-xl border border-gray-100 hover:border-blue-200 transition-colors">
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                    {achievement.icon}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-gray-700 leading-relaxed mb-2">{achievement.text}</p>
+                    <span className="inline-flex items-center gap-1 bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                      <Star className="w-3 h-3" />
+                      {achievement.metric}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Accenture Position */}
+      <div className="group bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 hover:border-blue-200 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        
+        <div className="flex items-start gap-6 relative z-10">
+          <div className="flex-shrink-0">
+            <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
+              <BarChart3 className="w-7 h-7 text-white" />
+            </div>
+          </div>
+          
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors">
+              Full Stack Engineering Analyst
+            </h3>
+            
+            <div className="flex items-center gap-4 text-gray-600 mb-4">
+              <div className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
+                <span className="text-sm">September 2021 - July 2024</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <MapPin className="w-4 h-4" />
+                <span className="text-sm">Accenture, Bengaluru, India</span>
+              </div>
+            </div>
+            
+            <div className="grid gap-4">
+              {[
+                {
+                  text: "Architected 15+ enterprise-grade microservices using Java Spring Boot 2.7+, Spring Cloud Gateway, Spring Data JPA, and Spring Security with OAuth2/JWT authentication, implementing Circuit Breaker pattern with Hystrix and service discovery using Eureka Server, serving 10,000+ concurrent users with 99.9% uptime.",
+                  metric: "$15M revenue impact, 35% reliability improvement",
+                  icon: <Code className="w-4 h-4" />
+                },
+                {
+                  text: "Implemented comprehensive DevOps pipeline using Jenkins, Docker, Kubernetes, and Terraform for infrastructure as code, with custom Kibana dashboards using Elasticsearch and Logstash (ELK Stack) for monitoring and observability.",
+                  metric: "32% faster deployment, 40% less troubleshooting time",
+                  icon: <GitBranch className="w-4 h-4" />
+                },
+                {
+                  text: "Architected and optimized SAP S/4 HANA data models with PostgreSQL and MySQL integration, enabling real-time analytics for 28+ production applications across multiple regions with advanced query optimization.",
+                  metric: "45% faster query response time",
+                  icon: <Database className="w-4 h-4" />
+                },
+                {
+                  text: "Integrated SAP GenAI Hub with OpenAI GPT-4 Turbo, Claude-3, and Google Gemini models using LangChain framework, implementing Retrieval-Augmented Generation (RAG) architecture with FAISS vector embeddings for automated Text-to-SQL query generation.",
+                  metric: "59% faster risk analysis, 1000+ queries daily with 94% accuracy",
+                  icon: <Cpu className="w-4 h-4" />
+                },
+                {
+                  text: "Developed comprehensive GenAI-powered documentation system using Python FastAPI, LangChain Agents, and OpenAI API with fine-tuned models, implementing semantic search with ChromaDB vector database and automated code review using GitHub Copilot integration.",
+                  metric: "300+ hours saved annually, 48% reduction in manual effort",
+                  icon: <Settings className="w-4 h-4" />
+                },
+                {
+                  text: "Built 20+ RESTful APIs using Spring Boot WebFlux for reactive programming, implemented GraphQL endpoints with Spring GraphQL, designed event-driven architecture using Apache Kafka for asynchronous messaging between microservices.",
+                  metric: "250ms average API response time, 99.8% success rate",
+                  icon: <Network className="w-4 h-4" />
+                },
+                {
+                  text: "Implemented MLOps pipeline for Large Language Model deployment using Docker containers, Kubernetes orchestration, and Azure OpenAI Service, with model versioning through MLflow and real-time monitoring using Weights & Biases.",
+                  metric: "99.5% model availability, 200ms response time",
+                  icon: <Shield className="w-4 h-4" />
+                }
+              ].map((achievement, index) => (
+                <div key={index} className="flex items-start gap-3 p-4 bg-white/50 rounded-xl border border-gray-100 hover:border-purple-200 transition-colors">
+                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                    {achievement.icon}
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-gray-700 leading-relaxed mb-2">{achievement.text}</p>
+                    <span className="inline-flex items-center gap-1 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+                      <Star className="w-3 h-3" />
+                      {achievement.metric}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
           {/* Education Section */}
           <div className="text-center mb-16">

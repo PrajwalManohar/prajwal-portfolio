@@ -1,6 +1,6 @@
 import React from 'react';
 import { RevealOnScroll } from '../RevealOnScroll';
-import { Code, Cloud, Database, Brain, Wrench, Award, Server, Smartphone,Building2 } from 'lucide-react';
+import { Code, Cloud, Database, Brain, Wrench, Award, Server, Smartphone,Building2, Cpu} from 'lucide-react';
 
 const skillCategories = [
   {
@@ -33,6 +33,24 @@ const skillCategories = [
     skills: ["TensorFlow", "OpenAI", "LangChain",  "scikit-learn", "NLP", "Pandas", "Librosa", "NLTK"],
     color: "from-pink-500 to-pink-600"
   },
+  {
+  title: "GenAI & Agentic Systems",
+  icon: <Cpu className="w-5 h-5" />,
+  skills: [
+    "LangGraph",
+    "LangChain",
+    "Groq API",
+    "LLaMA 3",
+    "OpenAI GPT-4",
+    "Retrieval-Augmented Generation (RAG)",
+    "FAISS",
+    "Prompt Engineering",
+    "Tool-Using Agents",
+    "Streamlit"
+  ],
+  color: "from-purple-600 to-pink-500"
+}
+,
   {
     title: "Development Tools",
     icon: <Wrench className="w-5 h-5" />,
