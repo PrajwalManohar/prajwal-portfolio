@@ -8,11 +8,41 @@ import project from '../../assets/project.png';
 import chest from '../../assets/chest.jpg';
 import object from '../../assets/obj.jpg';
 import plate from '../../assets/plate.jpg';
+import mlops from '../../assets/mlops.webp';
+import agentic from '../../assets/agentic.jpg';
+
 
 
 
 
 const projects = [
+  {
+  "title": "User Survival Prediction with Astro, Airflow & Observability Stack",
+  "image": mlops,
+  "description": "End-to-end machine learning pipeline that predicts user survival likelihood using behavioral data. Built with Apache Airflow on Astro, SQL-based data modeling, Redis for caching, and real-time monitoring via Prometheus and Grafana.",
+  "techStack": ["Astro", "Apache Airflow", "SQL", "Redis", "Grafana", "Prometheus", "Python", "Scikit-learn"],
+  "link": "https://github.com/PrajwalManohar/AML-Project-2",
+  "category": "Machine Learning / MLOps",
+  "featured": true
+},
+  {
+  "title": "Agentic AI Chatbot with LangGraph, Groq & Streamlit UI",
+  "image": agentic,
+  "description": "A modular GenAI assistant using LangGraph and LangChain to simulate agentic reasoning. Supports basic chat, document summarization, real-time news scraping, and web-enhanced Q&A. Features dynamic LLM switching between Groq’s LLaMA 3 and OpenAI models via an interactive Streamlit UI.",
+  "techStack": ["LangGraph", "LangChain", "Groq", "LLaMA 3", "OpenAI", "FAISS", "Streamlit", "BeautifulSoup", "Python"],
+  "link": "https://github.com/PrajwalManohar/Agentic-Chatbot",
+  "category": "Generative AI / Agentic Systems",
+  "featured": true
+},
+{
+  "title": "Hotel Reservation Cancellation Prediction - MLOps",
+  "image": mlops,
+  "description": "An end-to-end MLOps pipeline that predicts hotel reservation cancellations using LightGBM. Deployed on Google Cloud Run via Jenkins CI/CD pipeline with Docker and MLflow for experiment tracking. Built with modular, production-ready code for real-world applications like revenue optimization and fraud detection.",
+  "techStack": ["Python", "Flask", "LightGBM", "MLflow", "Docker", "Jenkins", "Google Cloud Storage", "Google Cloud Run", "SMOTE"],
+  "link": "https://github.com/PrajwalManohar/AML-Project-1",
+  "category": "Machine Learning / MLOps",
+  "featured": true
+},
   {
     "title": "Speech Activated Object Detection with Visual Recognition",
     "image": object,
@@ -37,24 +67,18 @@ const projects = [
   {
     title: 'Automatic Number Plate Detection using TFOD',
     image: plate,
-    link: '#',
+    link: 'https://github.com/PrajwalManohar/X-Ray-Image-Classifier-Using-DenseNet-',
     description:
       'Developed a License Plate Detection system using TensorFlow Object Detection (TFOD) to accurately identify vehicle license plates, addressing the growing need for efficient traffic monitoring in densely populated areas like India. The project integrates video processing and Optical Character Recognition (OCR) to extract license plate numbers, making it ideal for use at college gates and high-security zones. Captured video footage is processed into images and text, which are then stored in a database for future reference and security analysis.',
     techStack: ["TensorFlow Object Detection (TFOD)", "OpenCV","Tesseract OCR"],
     category: 'Full Stack'
   },
-  // {
-  //   title: 'Flipbook Library',
-  //   image: flipbook,
-  //   link: '#',
-  //   description:
-  //     'License Plate Detection which utilizes Tensor Flow Object Detection Model (TFOD) to detect license plates using OCR technology',
-  //   techStack: ['JavaScript', 'jQuery', 'Turn.js', 'AJAX', 'PHP', 'MySQL'],
-  //   category: 'Web Development'
-  // }
+
+
+ 
 ];
 
-const categories = ['All', 'Full Stack', 'AI/ML', 'Web Development', 'Data Analytics'];
+const categories = ['All', 'AI/ML','Full Stack','Generative AI / Agentic Systems', 'Machine Learning / MLOps'];
 
 export const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -69,7 +93,7 @@ export const Projects = () => {
       'Full Stack': '🚀',
       'AI/ML': '🤖',
       'Web Development': '💻',
-      'Data Analytics': '📊'
+      'Machine Learning / MLOps': '📊'
     };
     return icons[category] || '💡';
   };
@@ -79,7 +103,7 @@ export const Projects = () => {
       'Full Stack': 'from-blue-500 to-cyan-500',
       'AI/ML': 'from-purple-500 to-pink-500',
       'Web Development': 'from-green-500 to-teal-500',
-      'Data Analytics': 'from-orange-500 to-red-500'
+      'Machine Learning / MLOps': 'from-orange-500 to-red-500'
     };
     return colors[category] || 'from-gray-500 to-gray-600';
   };
@@ -110,7 +134,7 @@ export const Projects = () => {
                 </h2>
               </div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Explore my diverse portfolio of projects spanning full-stack development, AI/ML, data analytics, and IoT solutions.
+                Explore my diverse portfolio of projects spanning full-stack development, AI/ML, Machine Learning / MLOps, and IoT solutions.
               </p>
             </div>
 
